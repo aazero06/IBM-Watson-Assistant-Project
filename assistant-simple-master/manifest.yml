@@ -1,0 +1,15 @@
+---
+declared-services:
+  My First Watson Assistant:
+    label: conversation
+    plan: free
+applications:
+- name: ClothSystem
+  command: npm start
+  path: .
+  memory: 256M
+  instances: 1
+  services:
+  - My First Watson Assistant
+  env:
+    NPM_CONFIG_PRODUCTION: false
